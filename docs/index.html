@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Müzik Kuyruğu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="player">
+    <div class="now-playing">
+      <img id="albumArt" src="assets/placeholder.png" alt="Kapak">
+      <div class="track-info">
+        <h2 id="trackTitle">🎵 Bekleniyor...</h2>
+        <p id="trackArtist">-</p>
+      </div>
+      <div class="controls">
+        <button id="prevBtn" disabled>⏮</button>
+        <button id="playBtn">▶</button>
+        <button id="nextBtn" disabled>⏭</button>
+      </div>
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span id="timeInfo">0:00 / 0:00</span>
+      </div>
+    </div>
+    <div class="queue-panel">
+      <h3>Sıradaki (Queue)</h3>
+      <ul id="queueList"></ul>
+    </div>
+  </div>
+  <audio id="audioPlayer" crossorigin="anonymous"></audio>
+  <script src="js/websocket.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
