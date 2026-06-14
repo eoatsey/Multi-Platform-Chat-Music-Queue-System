@@ -1,0 +1,43 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff; min-height: 100vh; display: flex; justify-content: center; align-items: center;
+}
+.player {
+  max-width: 480px; width: 100%; padding: 20px; text-align: center;
+}
+.now-playing { margin-bottom: 30px; }
+#albumArt {
+  width: 200px; height: 200px; border-radius: 12px; object-fit: cover;
+  background: rgba(255,255,255,0.1); margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.track-info h2 { font-size: 1.4rem; margin-bottom: 5px; }
+.track-info p { color: #ccc; font-size: 0.9rem; }
+.controls { display: flex; justify-content: center; gap: 12px; margin: 20px 0; }
+.controls button {
+  width: 50px; height: 50px; border-radius: 50%; border: none;
+  background: #ff6b6b; color: white; font-size: 1.3rem; cursor: pointer;
+  transition: 0.2s;
+}
+.controls button:disabled { background: #555; cursor: not-allowed; }
+.controls button:hover:not(:disabled) { background: #ff5252; transform: scale(1.1); }
+.progress-container { margin: 15px 0; }
+.progress {
+  height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px; overflow: hidden;
+  cursor: pointer;
+}
+.progress-bar { height: 100%; width: 0%; background: #ff6b6b; transition: width 0.1s linear; }
+#timeInfo { font-size: 0.8rem; color: #ccc; display: block; margin-top: 5px; }
+.queue-panel {
+  background: rgba(0,0,0,0.3); border-radius: 10px; padding: 15px;
+  max-height: 200px; overflow-y: auto; text-align: left;
+}
+.queue-panel h3 { font-size: 1rem; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; }
+#queueList { list-style: none; }
+#queueList li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; }
+#queueList li:last-child { border: none; }
+.queue-user { color: #aaa; font-size: 0.75rem; }
+@media (max-width: 400px) {
+  #albumArt { width: 150px; height: 150px; }
+}
