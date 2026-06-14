@@ -117,6 +117,7 @@
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 20px;
         }
         
         .btn {
@@ -151,6 +152,54 @@
             color: white;
         }
         
+        .btn-player {
+            background: #4caf50;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .btn-player:hover {
+            background: #45a049;
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+        }
+        
+        .quick-links {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #667eea;
+        }
+        
+        .quick-links h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .quick-links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 15px;
+            background: white;
+            color: #667eea;
+            border: 1px solid #667eea;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
         .footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -170,6 +219,14 @@
             
             .features {
                 grid-template-columns: 1fr;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
             }
         }
     </style>
@@ -220,8 +277,16 @@
                 <strong>GitHub Pages:</strong> Etkin
             </div>
         </div>
+
+        <div class="quick-links">
+            <h3>⚡ Hızlı Erişim</h3>
+            <a href="docs/">🎵 Müzik Oynatıcısı</a>
+            <a href="https://github.com/eoatsey/Multi-Platform-Chat-Music-Queue-System">📚 Depo</a>
+            <a href="https://github.com/eoatsey">👤 Profil</a>
+        </div>
         
         <div class="buttons">
+            <a href="docs/" class="btn btn-player">▶ MÜZIK OYNATICIYI AÇ</a>
             <a href="https://github.com/eoatsey/Multi-Platform-Chat-Music-Queue-System" class="btn btn-primary">GitHub Deposu</a>
             <a href="https://github.com/eoatsey/Multi-Platform-Chat-Music-Queue-System#readme" class="btn btn-secondary">Dokümantasyon</a>
         </div>
