@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Platform Chat Music Queue System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            padding: 60px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #764ba2;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .description {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature {
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .feature-text {
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .status {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .status-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #4caf50;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #999;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Multi-Platform Chat Music Queue System</h1>
+        <p class="subtitle">Çok Platformlu Sohbet Üzerinden Müzik Kuyruk Sistemi</p>
+        
+        <p class="description">
+            Kick, YouTube, Twitch ve daha birçok platformda çalışan, sohbet üzerinden kontrol edebileceğiniz müzik ve yayın kuyruk sistemi.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🎮</div>
+                <div class="feature-title">Çok Platform</div>
+                <div class="feature-text">Kick, YouTube, Twitch, Discord ve daha fazlası</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎧</div>
+                <div class="feature-title">Müzik Kaynakları</div>
+                <div class="feature-text">YouTube, Spotify, SoundCloud, Deezer</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <div class="feature-title">Sohbet Kontrolü</div>
+                <div class="feature-text">Canlı sohbet üzerinden komutlar</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Hızlı & Güvenilir</div>
+                <div class="feature-text">Yüksek performanslı mimarisi</div>
+            </div>
+        </div>
+        
+        <div class="status">
+            <div class="status-item">
+                <span class="status-badge"></span>
+                <strong>Proje Durumu:</strong> Aktif Geliştirme
+            </div>
+            <div class="status-item">
+                <span class="status-badge"></span>
+                <strong>Dil:</strong> JavaScript (Node.js)
+            </div>
+            <div class="status-item">
+                <span class="status-badge"></span>
+                <strong>GitHub Pages:</strong> Etkin
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <a href="https://github.com/eoatsey/Multi-Platform-Chat-Music-Queue-System" class="btn btn-primary">GitHub Deposu</a>
+            <a href="https://github.com/eoatsey/Multi-Platform-Chat-Music-Queue-System#readme" class="btn btn-secondary">Dokümantasyon</a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Multi-Platform Chat Music Queue System | Tüm Hakları Saklıdır</p>
+            <p>Geliştirici: <a href="https://github.com/eoatsey" style="color: #667eea; text-decoration: none;">eoatsey</a></p>
+        </div>
+    </div>
+</body>
+</html>
