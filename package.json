@@ -1,0 +1,29 @@
+{
+  "name": "multi-platform-chat-music-queue",
+  "version": "1.0.0",
+  "description": "Chat üzerinden çok kaynaklı müzik ve yayın kuyruk sistemi",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "better-profanity": "^1.0.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "openai": "^4.20.0",
+    "sqlite3": "^5.1.6",
+    "ws": "^8.14.2",
+    "youtube-music-api": "^2.0.1",
+    "spotify-web-api-node": "^5.0.2",
+    "soundcloud-api": "^1.0.0",
+    "deezer-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
